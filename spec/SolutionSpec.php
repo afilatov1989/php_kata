@@ -5,10 +5,10 @@ namespace spec;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class SolutionSpec extends ObjectBehavior
-{
-    function it_is_initializable()
+class SolutionSpec extends ObjectBehavior {
+
+    function it_should_return_correct_values()
     {
-        $this->shouldHaveType('Solution');
+        $this->main()->shouldReturn(null);
     }
 }
