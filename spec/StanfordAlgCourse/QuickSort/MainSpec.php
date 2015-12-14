@@ -21,18 +21,18 @@ class MainSpec extends ObjectBehavior
     function it_sorts_correctly_with_first_strategy() {
         $this->beConstructedWith(new PivotStrategyFirst());
         $this->sorted([3,8,2,5,1,4,7,6])->shouldReturn([1,2,3,4,5,6,7,8]);
-        $this->countComparisons($this->getTestArray())->shouldReturn(162085);
+        //$this->countComparisons($this->getTestArray())->shouldReturn(162085);
     }
 
     function it_sorts_correctly_with_second_strategy() {
         $this->beConstructedWith(new PivotStrategyLast());
         $this->sorted([3,8,2,5,1,4,7,6])->shouldReturn([1,2,3,4,5,6,7,8]);
-        $this->countComparisons($this->getTestArray())->shouldReturn(164123);
+        //$this->countComparisons($this->getTestArray())->shouldReturn(164123);
     }
 
     function it_sorts_correctly_with_third_strategy() {
         $this->beConstructedWith(new PivotStrategyMedian());
         $this->sorted([3,8,2,5,1,4,7,6])->shouldReturn([1,2,3,4,5,6,7,8]);
-        $this->countComparisons($this->getTestArray())->shouldReturn(138382);
+        //$this->countComparisons($this->getTestArray())->shouldReturn(138382);
     }
 }
